@@ -1,0 +1,3 @@
+[submodule "source-app"]
+	path = source-app
+	url = https://code.choerodon.com.cn/hscf-hscf-hjl/mkt-web.git

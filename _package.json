@@ -1,0 +1,21 @@
+{
+  "name": "vue-complex-app-plus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "i": "cnpm i --registry=https://nexus.choerodon.com.cn/repository/hscf-npm/ && git submodule init && git submodule update",
+    "mp": "vue-cli-service merge-package"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@upman/babel-plugin-source-page": "alpha",
+    "@upman/babel-plugin-transform-export-default": "alpha",
+    "@upman/babel-plugin-transform-import-source": "alpha",
+    "@upman/node-utils": "alpha",
+    "@upman/record-source-page-loader": "alpha",
+    "@upman/record-tags-loader": "alpha",
+    "@upman/vue-cli-plugin-merge-source-app-package": "alpha",
+    "@upman/webpack-plugin-souce-page-map": "alpha"
+  }
+}
