@@ -27,7 +27,7 @@ MockVue.version = Vue.version;
 
 [
   'extend', 'nextTick', 'set', 'delete', 'directive', 'filter',
-  'component', 'use', 'mixin', 'compile', 'observable',
+  'component', 'use', 'mixin', 'compile', 'observable', 'createAPI',
 ].forEach((api) => {
   MockVue[api] = (...args) => {
     Vue[api](...args);
