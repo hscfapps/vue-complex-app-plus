@@ -31,7 +31,6 @@ sourceVueConfig.chainWebpack = (config) => {
     .tap((_args) => {
       const args = _args;
       args[0].include.push('source-app');
-      console.log(args[0].include);
       return args;
     });
 

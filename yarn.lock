@@ -740,10 +740,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hscf/sharing@^1.4.0-alpha.1":
-  version "1.4.0-alpha.1"
-  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@hscf/sharing/-/sharing-1.4.0-alpha.1.tgz#9fa46f5f3ff8ee53b018a82ee190f9caf0699f5f"
-  integrity sha512-nDj5djMMSuadLUvWe1ggZogDPClKUL2E46HBCHw82ssejsGILPKpouqPw05nv+SbLZS7+AY3Atm7YbIfFlkXPw==
+"@hscf/sharing@^1.4.0-alpha.2":
+  version "1.4.0-alpha.2"
+  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@hscf/sharing/-/sharing-1.4.0-alpha.2.tgz#15396f73f64bd85e2a091b85b08b55a7c3e362ae"
+  integrity sha512-sFkO4XQFuwDuJtpcxObphKi7PeMpU31ixXaExx2CzSIjNn7uJPP1aNz/ZADrQ9ooStr/X/K6hZs792E8ZTrSnQ==
   dependencies:
     "@candy/vuex-plugin-persistence" "^1.0.1"
     js-cookie "^2.2.0"
