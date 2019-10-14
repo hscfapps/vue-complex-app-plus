@@ -740,10 +740,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hscf/sharing@alpha":
-  version "1.4.0-alpha.0"
-  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@hscf/sharing/-/sharing-1.4.0-alpha.0.tgz#e679ea53e0f1fe4fabb22a8bc3ad302bd2a2ca6e"
-  integrity sha512-qt5nzEKrOkun9LvnYjMr/0EYPvncmGEC9AnwTqyUVLdq0lAU3ktX0ARb3Ha6elhOn0PTpMX2EiVEaJzwgEOpUg==
+"@hscf/sharing@^1.4.0-alpha.1":
+  version "1.4.0-alpha.1"
+  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@hscf/sharing/-/sharing-1.4.0-alpha.1.tgz#9fa46f5f3ff8ee53b018a82ee190f9caf0699f5f"
+  integrity sha512-nDj5djMMSuadLUvWe1ggZogDPClKUL2E46HBCHw82ssejsGILPKpouqPw05nv+SbLZS7+AY3Atm7YbIfFlkXPw==
   dependencies:
     "@candy/vuex-plugin-persistence" "^1.0.1"
     js-cookie "^2.2.0"
@@ -941,9 +941,9 @@
     sync-disk-cache "^1.3.3"
 
 "@upman/sharing-vue-config@alpha":
-  version "2.0.0-alpha.1"
-  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@upman/sharing-vue-config/-/sharing-vue-config-2.0.0-alpha.1.tgz#d5f49364ad8d24ea04b4db483bc44670c18718a2"
-  integrity sha512-LAoHjBVv3LC94g+yMyceCrr2OnTzQxJSAGi5K7BYHkPNwPE3YCwRzsYMRvFi5+AzeSITJbgCSgnP/vF0t4MyyQ==
+  version "2.0.0-alpha.2"
+  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@upman/sharing-vue-config/-/sharing-vue-config-2.0.0-alpha.2.tgz#f9fa5af6c6f711f28d4ad47dd894cb80d2d6da47"
+  integrity sha512-cx3WY8mHOpeWYQT09P3mPihJ7f9QJp30VAWdrJS5vwy50e9FUS8aZYqUxKNid8kPKpVyb+Tmaz7eqEu2ff7Svw==
   dependencies:
     "@upman/node-utils" alpha
 
@@ -959,9 +959,9 @@
     package-merge-v2 "^0.1.2"
 
 "@upman/vue-cli-plugin-upman-config@alpha":
-  version "2.0.0-alpha.3"
-  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@upman/vue-cli-plugin-upman-config/-/vue-cli-plugin-upman-config-2.0.0-alpha.3.tgz#7d5b750061cec7041d18e5507a62566997ed2189"
-  integrity sha512-WgSrByoF4qKZoDcdg522d95OEYmzRX/NANC+bIRHdZVLZPHVItZAdBQ2KpVBpR/hrg1IMe8bMNn2MVWF2Pj01A==
+  version "2.0.0-alpha.4"
+  resolved "https://nexus.choerodon.com.cn/repository/hscf-npm/@upman/vue-cli-plugin-upman-config/-/vue-cli-plugin-upman-config-2.0.0-alpha.4.tgz#d99c48424a98dd084c410b35af49006d2214d7ff"
+  integrity sha512-4ktIvunAE4GKdWbcUExyFFzeEYVLU/uxPs2YbaFZ7TnjRXsItAmllPuMYmqysYp0g2ftcLxo4PiR8DsdbUHcLg==
   dependencies:
     "@upman/cli-sharing" alpha
     "@upman/node-utils" alpha

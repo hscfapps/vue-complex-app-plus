@@ -1,5 +1,8 @@
 const nu = require('@upman/node-utils');
 const SoucePageMapPlugin = require('@upman/webpack-plugin-souce-page-map');
+
+process.env.UPMAN_ASSET_PATH = 'source-app/src/asset';
+
 const sourceVueConfig = require('./source-app/vue.config');
 
 const originChainWebpack = sourceVueConfig.chainWebpack;
@@ -28,6 +31,7 @@ sourceVueConfig.chainWebpack = (config) => {
     .tap((_args) => {
       const args = _args;
       args[0].include.push('source-app');
+      console.log(args[0].include);
       return args;
     });
 
@@ -37,6 +41,14 @@ sourceVueConfig.chainWebpack = (config) => {
       const args = _args;
       args[0].page = 'source-app/src/page';
       args[0].routerDir = 'source-app/src/conf/router';
+      return args;
+    });
+
+  config
+    .plugin('upman-element-style')
+    .tap((_args) => {
+      const args = _args;
+      args[0].output = 'source-app/el-theme';
       return args;
     });
 

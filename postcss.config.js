@@ -1,1 +1,1 @@
-module.exports = require('./ssource-app/postcss.config.js');
+module.exports = require('./source-app/postcss.config.js');
