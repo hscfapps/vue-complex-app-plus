@@ -1,29 +1,46 @@
 const nu = require('@upman/node-utils');
 const SoucePageMapPlugin = require('@upman/webpack-plugin-souce-page-map');
-// eslint-disable-next-line import/no-extraneous-dependencies
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 const sourceVueConfig = require('./source-app/vue.config');
 
 const originChainWebpack = sourceVueConfig.chainWebpack;
-
 sourceVueConfig.chainWebpack = (config) => {
   if (originChainWebpack) {
     originChainWebpack(config);
   }
 
-  config.mode('development');
-  config.optimization.minimize(false);
-
+  // 修改原有配置
   config.resolve.alias
     .set('@', nu.resolve('source-app/src'))
-    .set('source@', nu.resolve('source-app'));
+    .set('el-style@', nu.resolve('source-app/el-theme'))
+    .set('asset@', nu.resolve('source-app/src/asset'))
+    .set('api@', nu.resolve('source-app/src/api'))
+    .set('com@', nu.resolve('source-app/src/common'))
+    .set('comp@', nu.resolve('source-app/src/component'))
+    .set('conf@', nu.resolve('source-app/src/conf'))
+    .set('config@', nu.resolve('source-app/src/conf/config'))
+    .set('mx@', nu.resolve('source-app/src/conf/config'))
+    .set('dire@', nu.resolve('source-app/src/directive'))
+    .set('page@', nu.resolve('source-app/src/page'))
+    .set('_@', nu.resolve('source-app/uipublice'));
 
-  config.plugin('source-page-map')
-    .use(SoucePageMapPlugin, [{
-      routersPath: 'src/routes.js',
-      sourceRoutersPath: 'source-app/src/routes.js',
-    }]);
+  config
+    .plugin('upman-scan-meta')
+    .tap((_args) => {
+      const args = _args;
+      args[0].include.push('source-app');
+      return args;
+    });
+
+  config
+    .plugin('upman-auto-router')
+    .tap((_args) => {
+      const args = _args;
+      args[0].page = 'source-app/src/page';
+      args[0].routerDir = 'source-app/src/conf/router';
+      return args;
+    });
+
+  // 额外添加
   config.module.rule('vue')
     .use('record-source-page')
     .loader('@upman/record-source-page-loader')
@@ -32,25 +49,14 @@ sourceVueConfig.chainWebpack = (config) => {
     .use('record-tags')
     .loader('@upman/record-tags-loader')
     .before('vue-loader');
-  config
-    .plugin('html')
-    .tap((_args) => {
-      const args = _args;
-      if (args[0]) {
-        args[0].template = nu.resolve('source-app/public/index.html');
-      }
-      return args;
-    });
-  // 由于改变了html插件的参数， 会导致copy-webpack-plugin失效
-  config.plugins.delete('copy');
-  config
-    .plugin('copy')
-    .use(CopyWebpackPlugin, [[{
-      from: nu.resolve('source-app/public'),
-      to: nu.resolve('dist'),
-      toType: 'dir',
-      ignore: ['.DS_Store'],
-    }]]);
+  config.plugin('source-page-map')
+    .use(SoucePageMapPlugin, [{
+      routersPath: 'src/routes.js',
+      sourceRoutersPath: 'source-app/src/conf/router/routes.js',
+    }]);
 };
+
+sourceVueConfig.pluginOptions.staticPath = 'source-app/static';
+sourceVueConfig.pluginOptions.staticPath = 'source-app/html';
 
 module.exports = sourceVueConfig;

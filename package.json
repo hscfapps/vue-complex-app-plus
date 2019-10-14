@@ -1,18 +1,59 @@
 {
   "name": "vue-complex-app-plus",
   "version": "0.1.0",
+  "description": "汉得供金链平台-融资产品平台",
+  "author": "liliang <liang.li02@hand-china.com>",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "i": "cnpm i --registry=https://nexus.choerodon.com.cn/repository/hscf-npm/ && git submodule init && git submodule update",
+    "local": "vue-cli-service serve --mode local --port 11000",
+    "uat": "vue-cli-service build --mode uat",
+    "prod": "vue-cli-service build --mode prod",
     "lint": "vue-cli-service lint",
     "mp": "vue-cli-service merge-package"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "@candy/ui": "^1.0.35",
+    "@candy/utils": "^1.0.22",
+    "@hscf/sharing": "alpha",
+    "animate.css": "^3.7.0",
+    "animejs": "^3.0.1",
+    "axios": "^0.18.0",
+    "dayjs": "^1.7.7",
+    "element-ui": "^2.6.1",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "mockjs": "^1.0.1-beta3",
+    "querystring": "^0.2.0",
+    "vue": "^2.6.7",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0"
+    "@upman/babel-plugin-source-page": "alpha",
+    "@upman/babel-plugin-transform-export-default": "alpha",
+    "@upman/babel-plugin-transform-import-source": "alpha",
+    "@upman/code-analysis": "^1.1.1",
+    "@upman/eslint-config-upman": "^1.1.0",
+    "@upman/node-utils": "alpha",
+    "@upman/record-source-page-loader": "alpha",
+    "@upman/record-tags-loader": "alpha",
+    "@upman/sharing-vue-config": "alpha",
+    "@upman/vue-cli-plugin-merge-source-app-package": "alpha",
+    "@upman/vue-cli-plugin-upman-config": "alpha",
+    "@upman/webpack-plugin-souce-page-map": "alpha",
+    "@vue/cli-plugin-babel": "3.4.1",
+    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-service": "^3.12.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-imports": "^1.5.1",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 6.0.0"
   }
 }
